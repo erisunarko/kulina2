@@ -1,0 +1,14 @@
+{{ define "Edit" }}
+  {{ template "Header" }}
+    {{ template "Menu" }} 
+   <h2>Edit Data KTP</h2>  
+    <form method="POST" action="update">
+      <input type="hidden" name="uid" value="{{ .Id }}" />
+      <label> Name </label><input type="text" name="name" value="{{ .Name }}" required /><br />
+      <label> Address </label><input type="text" name="address" value="{{ .Address }}" required /><br />
+	  <label> Place of Birth </label><input type="text" name="place_of_birth" value="{{ .PlaceOfBirth }}" required /><br />
+	  <label> Date of Birth </label><input type="date" name="date_of_birth" value="{{ .DateOfBirth }}" required /><br />
+      <input type="submit" value="Save" />
+    </form><br />    
+  {{ template "Footer" }}
+{{ end }}
